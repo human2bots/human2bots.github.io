@@ -289,13 +289,11 @@
             In this work, we present a system that integrates data collection and learning from both human and robotic sources. 
             Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, 
             which accounts for whole-body motions and active sensing across different embodiments. 
-            To effectively leverage this data, we propose an efficient learning architecture that 
-            supports pre-training and co-training with multimodal data from diverse embodiments, including humans. 
-            Additionally, we construct the first dataset for the LocoMan robot, encompassing various household manipulation tasks, 
-            supplemented with a corresponding human dataset. Experimental results demonstrate that our data collection 
-            and training framework significantly enhances the performance and efficiency of imitation learning, 
+            To effectively leverage the data, we propose an efficient learning architecture that supports pre-training with multimodal data from diverse embodiments, including humans. 
+            Additionally, we replicate and construct the first dataset for the LocoMan robot, 
+            encompassing various household manipulation tasks and supplemented with a corresponding human dataset. 
+            Experimental results demonstrate that our data collection and training framework significantly enhances the performance and efficiency of imitation learning, 
             enabling more versatile quadrupedal manipulation capabilities.
-
           </p>
         </div>
       </div>
@@ -324,8 +322,7 @@
         <h2 class="title is-3">Teleoperation & Data Collection System</h2>
         <div class="content has-text-justified">
           <p>
-            Our teleoperation system is built upon <a href="https://robot-tv.github.io/">Open-Television</a> 
-            and <a href="https://dingry.github.io/projects/bunny_visionpro.html">Bunny-VisionPro</a>. By leveraging
+            Our teleoperation system is built upon <a href="https://robot-tv.github.io/">Open-Television</a>. By leveraging
             the head and hand tracking capabilities of the Apple Vision Pro, we enable immersive human teleoperation with 
             visual feedback on robot embodiments such as LocoMan. This systems allows collecting data on the robot at least
             4x faster than using a traditional remote control.
@@ -525,14 +522,18 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h4 class="title is-4">Toy Collection - Autonomous</h4>
+        <h4 class="title is-4">Toy Collection (Single-Gripper)</h4>
           <video id="locoman_demo" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/auto_collect.mp4"
                     type="video/mp4">
           </video>
-          <p>
-            More autonomous demos coming soon!
-          </p>
+      </div>
+      <div class="column is-four-fifths">
+        <h4 class="title is-4">Toy Collection (Bimanual)</h4>
+          <video id="locoman_demo" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bimanual_rollout_toy_collect.mp4"
+                    type="video/mp4">
+          </video>
       </div>
     </div>
   </div>
