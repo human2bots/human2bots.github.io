@@ -254,10 +254,14 @@
         <h2 class="title is-3">Teleoperation & Data Collection System</h2>
         <div class="content has-text-justified">
           <p>
-            Our teleoperation system is built upon <a href="https://robot-tv.github.io/">Open-Television</a>. By leveraging
+            <!-- Our teleoperation system is built upon <a href="https://robot-tv.github.io/">Open-Television</a>. By leveraging
             the head and hand tracking capabilities of the Apple Vision Pro, we enable immersive human teleoperation with 
             visual feedback on robot embodiments such as LocoMan. This system allows collecting data on the robot at least
-            4x faster than using a traditional remote control.
+            4x faster than using a traditional remote control. -->
+            We develop a unified system for both robot teleoperation and human data collection.
+            Our teleoperation system controls the 6D poses of end-effectors and the rigid body where the stereo camera is mounted (the torso of LocoMan, the head of human). 
+            The coordination of whole-body motions expand the workspace and camera sensing ranges. Our teleoperation system is fast-response, stable, and user frendly, 
+            by incorporating interpolations for fast movements, detection and recovery from self-collisions, ground-collisions, and joint limits.
           </p>
 
           <!-- Wrap videos in a Bulma columns layout -->
@@ -280,8 +284,11 @@
           </div>
 
           <p>
-            Apple Vision Pro is also used for collecting human videos with captured hand motions. Through the simple interface we designed,
-            a human operator can easily collect dozens of trajectories by themselves within minutes.
+            <!-- Apple Vision Pro is also used for collecting human videos with captured hand motions. Through the simple interface we designed,
+            a human operator can easily collect dozens of trajectories by themselves within minutes. -->
+            We mount an stereo camera on the VR set to collect first-person view of human videos and capture human's hand and head motions 
+            within a unified coordinate frames as the robot embodiments.
+            Through the simple interface we designed, a human operator without robot access can easily collect dozens of trajectories by themselves within minutes.
           </p>
 
           <div class="columns is-centered">
@@ -325,6 +332,9 @@
     </div>
   </div>
   <div class="container is-max-desktop">
+    <p>
+      The LocoMan robot can be operated to complete diverse tasks that require coordinating whole-body motions with ease.
+    </p>
     <div class="columns is-centered">
       <div class="column">
         <video id="main_demo" autoplay controls muted loop playsinline width="100%">
@@ -351,13 +361,13 @@
           <p>
             Our learning framework is designed to efficiently learn from the multimodal data from both human and robot sources.
             To this end, we employ a Transformer-based architecture where tokenization and detokenization are performed by
-            modules with embodiment-specific weights, but the core Transformer weights are shared across all embodiments. 
+            modules with embodiment-specific weights, while the core Transformer weights are shared across all embodiments. 
           </p>
           <p>
-            Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
+            <!-- Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
             leveraging data from a few other embodiments to improve the learning performance in the target domain. This
             allows us to perform modality alignment on a finer granularity and use separate tokenizers/detokenizers 
-            for each modality from one embodiment.
+            for each modality from one embodiment. -->
           </p>
           <img src="./static/images/model_arch.png"
                class="arch-image"
@@ -413,7 +423,7 @@
           <video id="main_demo" autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/rollout_human_pretrained_2min_data_fintuned.mp4" type="video/mp4">
           </video>
-          <h4 class="title is-5">Human pretrained, 2-min robot data (success 4/5)</h4>
+          <h4 class="title is-5">Human pretrained, 2-min robot data (success 5/5)</h4>
         </div>
       </div>
     </div>
