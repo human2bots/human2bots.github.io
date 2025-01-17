@@ -228,16 +228,12 @@
             from easily sourced human videos to further scale up training. We demonstrate the effectiveness of our approach
             on a variety of tasks and robot embodiments. 
           </p> -->
-          <p>Quadrupedal robots have demonstrated the ability to locomote and manipulate in complex environments. 
-            However, equipping them with versatile and scalable manipulation skills remains a significant challenge. 
-            In this work, we present a system that integrates data collection and learning from both human and robotic sources. 
-            Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, 
-            which accounts for whole-body motions and active sensing across different embodiments. 
-            To effectively leverage the data, we propose an efficient learning architecture that supports pre-training with multimodal data from diverse embodiments, including humans. 
-            Additionally, we replicate and construct the first dataset for the LocoMan robot, 
-            encompassing various household manipulation tasks and supplemented with a corresponding human dataset. 
-            Experimental results demonstrate that our data collection and training framework significantly enhances the performance and efficiency of imitation learning, 
-            enabling more versatile quadrupedal manipulation capabilities.
+          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. 
+            In this work, we introduce a system that integrates data collection and imitation learning from both humans and LocoMan, a quadrupedal robot with multiple manipulation modes. 
+            Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, which unifies and modularizes the observation and action spaces of the human and the robot. 
+            To effectively leverage the collected data, we propose an efficient learning architecture that supports co-training and pre-training with multimodal data across different embodiments. 
+            Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both single-gripper and bimanual modes, supplemented by a corresponding human dataset.
+            Experimental results demonstrate that our data collection and training framework significantly improves the efficiency and effectiveness of imitation learning, enabling more versatile quadrupedal manipulation capabilities.
           </p>
           <img src="./static/images/system_framework.png"
                class="arch-image"
