@@ -283,6 +283,19 @@
             </div>
           </div>
 
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/teleop_shoe_rack_org.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/teleop_object_storage.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
           <p>
             <!-- Apple Vision Pro is also used for collecting human videos with captured hand motions. Through the simple interface we designed,
             a human operator can easily collect dozens of trajectories by themselves within minutes. -->
@@ -294,17 +307,17 @@
           <div class="columns is-centered">
             <div class="column">
               <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/human_bimanual_toy_collect.mp4" type="video/mp4">
+                <source src="./static/videos/toy_collect_bimanual_human.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column">
               <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/first_view_locoman_single_toy_collect.mp4" type="video/mp4">
+                <source src="./static/videos/shoe_org_unimanual_human.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column">
               <video id="robot_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/human_bimanual_pour.mp4" type="video/mp4">
+                <source src="./static/videos/pour_bimanual_human.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -312,17 +325,17 @@
           <div class="columns is-centered">
             <div class="column">
               <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/first_view_human_bimanual_toy_collect.mp4" type="video/mp4">
+                <source src="./static/videos/toy_collect_bimanual_human_fpv.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column">
               <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/first_view_human_single_toy_collect.mp4" type="video/mp4">
+                <source src="./static/videos/shoe_org_unimanual_human_fpv.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column">
               <video id="robot_demo" autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/first_view_human_bimanual_pour.mp4" type="video/mp4">
+                <source src="./static/videos/pour_bimanual_human_fpv.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -331,24 +344,7 @@
       </div>
     </div>
   </div>
-  <div class="container is-max-desktop">
-    <p>
-      The LocoMan robot can be operated to complete diverse tasks that require coordinating whole-body motions with ease.
-    </p>
-    <div class="columns is-centered">
-      <div class="column">
-        <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/teleop_shoe_rack_org.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column">
-        <video id="main_demo" autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/teleop_object_storage.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
 
-  </div>
 </section>
 
 <section class="section">
@@ -356,12 +352,12 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Cross-Embodiment Learning Framework</h2>
+        <h2 class="title is-3">Modularized Cross-Embodiment Transformer (MXT)</h2>
         <div class="content has-text-justified">
           <p>
-            Our learning framework is designed to efficiently learn from the multimodal data from both human and robot sources.
-            To this end, we employ a Transformer-based architecture where tokenization and detokenization are performed by
-            modules with embodiment-specific weights, while the core Transformer weights are shared across all embodiments. 
+            Our learning framework is designed to efficiently use data from both human and robot sources.
+            We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, transformer trunk, and detokenizers. 
+            The tokenizers act as encoders and map embodiment-specific observations to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to actions in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments.
           </p>
           <p>
             <!-- Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
