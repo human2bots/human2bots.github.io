@@ -2,6 +2,10 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+video {
+  border-radius: 12px; /* Adjust this value for more or less rounding */
+  overflow: hidden; /* Ensures content inside respects border-radius */
+}
 
 .footer .icon-link {
     font-size: 25px;
