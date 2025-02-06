@@ -413,24 +413,60 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
+        <h3 class="title is-4">Robust to OOD Objects</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/shoe_org_unimanual_ood_mxt.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT</h4>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/shoe_org_unimanual_ood_mxt_no_pretrain.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT (not pretrained)</h4>
+      </div>
+    </div>
+      
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/pour_bimanual_ood_mxt.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT</h4>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/pour_bimanual_ood_hit.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">HIT</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
         <h3 class="title is-4">Data-Efficient Finetuning</h3>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
-      <div class="columns is-centered">
         <div class="column">
           <video id="main_demo" autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/mxt_2min_toy_collect_unimanual_rollout.mp4" type="video/mp4">
           </video>
-          <h4 class="title is-5">Human pretrained, finetuned with 2-min robot data (success 5/5)</h4>
+          <h4 class="title is-5">MXT, finetuned with 2-min robot data (success 5/5)</h4>
         </div>
         <div class="column">
           <video id="main_demo" autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/mxt_scratch_4min_toy_collect_unimanual_rollout.mp4" type="video/mp4">
           </video>
-          <h4 class="title is-5">No human pretrained, finetuned with 4-min robot data (success 2/5)</h4>
+          <h4 class="title is-5">MXT (not pretrained), trained with 4-min robot data (success 2/5)</h4>
         </div>
-      </div>
     </div>
   </div>
 </section>
