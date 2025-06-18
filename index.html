@@ -130,7 +130,7 @@
             <span class="author-block"><sup>3</sup>Bosch Center for Artificial Intelligence</span>
           </div>
           <div class="is-size-5 publication-authors" style="margin-top: 0.75em;">
-            <span class="author-block">RSS 2025</span>
+            <span class="author-block">Robotics: Science and Systems (RSS) 2025</span>
           </div>
 
           <div class="column has-text-centered">
@@ -233,7 +233,7 @@
             from easily sourced human videos to further scale up training. We demonstrate the effectiveness of our approach
             on a variety of tasks and robot embodiments. 
           </p> -->
-          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. In this work, we introduce a system that integrates data collection and imitation learning from both humans and LocoMan, a quadrupedal robot with multiple manipulation modes. Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, which unifies and modularizes the observation and action spaces of the human and the robot. To effectively leverage the collected data, we propose an efficient learning architecture that supports co-training and pretraining with multimodal data across different embodiments. Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both unimanual and bimanual modes, supplemented by a corresponding human dataset. Experimental results demonstrate that our data collection and training framework significantly improves the efficiency and effectiveness of imitation learning, enabling more versatile quadrupedal manipulation capabilities. 
+          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. In this work, we introduce a cross-embodiment imitation learning system for quadrupedal manipulation, leveraging data collected from both humans and LocoMan, a quadruped equipped with multiple manipulation modes. Specifically, we develop a teleoperation and data collection pipeline, which unifies and modularizes the observation and action spaces of the human and the robot. To effectively leverage the collected data, we propose an efficient modularized architecture that supports co-training and pretraining on structured modality-aligned data across different embodiments. Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both unimanual and bimanual modes, supplemented by a corresponding human dataset. We validate our system on six real-world manipulation tasks, where it achieves an average success rate improvement of 41.9% overall and 79.7% under out-of-distribution (OOD) settings compared to the baseline. Pretraining with human data contributes a 38.6% success rate improvement overall and 82.7% under OOD settings, enabling consistently better performance with only half the amount of robot data.
           </p>
           <img src="./static/images/system_overview.png"
                class="arch-image"
@@ -353,9 +353,7 @@
         <h2 class="title is-3">Modularized Cross-Embodiment Transformer (MXT)</h2>
         <div class="content has-text-justified">
           <p>
-            Our learning framework is designed to efficiently use data from both human and robot sources.
-            We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, transformer trunk, and detokenizers. 
-            The tokenizers act as encoders and map embodiment-specific observations to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to actions in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments.
+            Our learning framework is designed to efficiently utilize data from both human and robot sources, and account for modality-specific distributions unique to each embodiment. We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, Transformer trunk, and detokenizers. The tokenizers act as encoders and map embodiment-specific observation modalities to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to action modalities in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments. 
           </p>
           <p>
             <!-- Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
