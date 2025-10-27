@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning LocoMan skills from human demonstrations.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EgoX</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/human2locoman_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .human-data {
+      color: #3A7E22; /* Choose your preferred color */
+    }
+
+    .robot-data {
+      color: #8B51D2; /* Choose your preferred color */
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EgoX: Cross-Embodiment Ego-Centric Learning for Versatile Manipulation</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yaruniu.com/">Yaru Niu</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=X0fcRMIAAAAJ">Yunzhe Zhang</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              Mingyang Yu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://linchangyi1.github.io/">Changyi Lin</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Chenhao Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=7ZZ9fOIAAAAJ&hl=zh-CN">Yikai Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://yxyang.github.io/">Yuxiang Yang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://research.google/people/tingnanzhang/?&type=google">Tingnan Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=6LYI6uUAAAAJ&hl=en">Zhenzhen Li</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jonfranc.com/">Jonathan Francis</a><sup>1,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=LYt_2MgAAAAJ&hl=en">Bingqing Chen</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.jie-tan.net/">Jie Tan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.meche.engineering.cmu.edu/directory/bios/zhao-ding.html">Ding Zhao</a><sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-weight: 600;"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block" style="font-weight: 600;"><sup>2</sup>Google DeepMind,</span>
+            <span class="author-block" style="font-weight: 600;"><sup>3</sup>Bosch Center for Artificial Intelligence</span>
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top: 0.75em;">
+            <span class="author-block" style="font-weight: 600;">Robotics: Science and Systems (RSS) 2025</span>
+          </div> -->
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://human2bots.github.io/static/pdfs/human2locoman.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.arxiv.org/abs/2506.16475"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/ay_-z9M18p0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/chrisyrniu/Human2LocoMan"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://x.com/yaru_niu/status/1937179256897011773" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/chrisyrniu/human2locoman" 
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo" style="width: 1em; height: 1em;">
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/chrisyrniu/mxt" 
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-cube"></i>
+                  </span>
+                  <span>Models</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/b6SVm8zuUcc?si=0zdRBREwMJoY0CT4&t=22200"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>RSS Talk</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.bilibili.com/video/BV13WbVzjE1v/?spm_id_from=333.1387.0.0&vd_source=2dbcc94dec27d06d43db642c19332c1f"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#ffffff}</style><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
+                    </span>
+                    <span>中文讲解</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/gPx3-QnrHl4?si=2cNG4F5JkWkdYI57"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Story</span>
+                </a>
+              </span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Videos Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Data Collection for G1 Robot</h3>
+        <video id="g1_nut_pour" autoplay controls muted loop playsinline width="100%">
+          <source src="./assets/videos/g1_nut_pour.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Unified Framework for Cross-Embodiment Ego-Centric Learning</h3>
+        <video id="embodiment_compare" autoplay controls muted loop playsinline width="100%">
+          <source src="./assets/videos/embodiment_compare.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Versatile Manipulation including Tool Use</h3>
+        <!-- First row of videos -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <video id="toy_cut" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/toy_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video id="banana_cut" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/banana_cut_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video id="nuts_pour_bowl" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/nuts_pour_bowl_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- Second row of videos -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <video id="nuts_pour_cup" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/nuts_pour_cup_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video id="nuts_scoop" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/nuts_scoop_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video id="cat_scoop" autoplay controls muted loop playsinline width="100%">
+              <source src="./assets/videos/cat_scoop_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Ego-Centric Human Demonstrations</h3>
+        <video id="human_tasks" autoplay controls muted loop playsinline width="100%">
+          <source src="./assets/videos/human_tasks.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            <!-- This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website. -->
+            Template borrowed from <a href="https://nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
