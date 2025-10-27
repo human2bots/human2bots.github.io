@@ -12,21 +12,21 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="../static/css/fontawesome.all.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/human2locoman_icon.png">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/human2locoman_icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
 
   <style>
     .human-data {
@@ -209,64 +209,77 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <h3 class="title is-4">Data Collection for G1 Robot</h3>
-        <video id="g1_nut_pour" autoplay controls muted loop playsinline width="100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
           <source src="./assets/videos/g1_nut_pour.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <h3 class="title is-4">Unified Framework for Cross-Embodiment Ego-Centric Learning</h3>
-        <video id="embodiment_compare" autoplay controls muted loop playsinline width="100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
           <source src="./assets/videos/embodiment_compare.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Versatile Manipulation including Tool Use</h3>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/toy_cut.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/banana_cut_cut.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/nuts_pour_bowl_cut.mp4" type="video/mp4">
         </video>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h3 class="title is-4">Versatile Manipulation including Tool Use</h3>
-        <!-- First row of videos -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <video id="toy_cut" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/toy_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <video id="banana_cut" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/banana_cut_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <video id="nuts_pour_bowl" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/nuts_pour_bowl_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <!-- Second row of videos -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <video id="nuts_pour_cup" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/nuts_pour_cup_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <video id="nuts_scoop" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/nuts_scoop_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column">
-            <video id="cat_scoop" autoplay controls muted loop playsinline width="100%">
-              <source src="./assets/videos/cat_scoop_cut.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/nuts_pour_cup_cut.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/nuts_scoop_cut.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
+          <source src="./assets/videos/cat_scoop_cut.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Ego-Centric Human Demonstrations</h3>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h3 class="title is-4">Ego-Centric Human Demonstrations</h3>
-        <video id="human_tasks" autoplay controls muted loop playsinline width="100%">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%" style="border-radius: 12px; overflow: hidden;">
           <source src="./assets/videos/human_tasks.mp4" type="video/mp4">
         </video>
       </div>
